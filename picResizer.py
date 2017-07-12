@@ -30,10 +30,10 @@ def resizeImage(filein, fileout, width, height, type):
 
 
 pics = [APic(187, 105, 'pic2'), APic(230, 240, 'pic3')]
-filein = 'pic.jpg'
+filein = "sample/pic.jpg"
 fileType = 'png'
 for pic in pics:
-    fileout = pic.filename + "." + fileType
+    fileout = "sample/" + pic.filename + "." + fileType
     width = pic.width
     height = pic.height
     resizeImage(filein, fileout, width, height, fileType)
