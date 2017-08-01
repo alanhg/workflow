@@ -5,10 +5,11 @@
 import requests
 from bs4 import BeautifulSoup
 
-targetUrl="https://github.com/trending"
+targetUrl = "https://github.com/trending"
 r = requests.get(targetUrl, verify=True)
-soup=BeautifulSoup(r.text)
+soup = BeautifulSoup(r.text, "html.parser")
+olObj = soup.find('ol', class_="repo-list")
 
-ol=soup.find_all("ol", class_="repo-list")
-print(ol[0])
-
+for liObj in olObj.children:
+    print(liObj)
+# .div.h3.a.span.string
