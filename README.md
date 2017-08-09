@@ -8,4 +8,6 @@
 + pinger.py
   判断目标主机群是否有回复
 + ssher.py
-  ssh会话连接目标主机群，执行指定指令集
+  ssh会话连接目标linux主机群，执行指定指令集
++ sendEmail.py
+  邮件发送，支持html格式内容
